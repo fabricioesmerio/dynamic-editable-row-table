@@ -1,0 +1,23 @@
+<div class="table-container">
+    <table class="fe-table">
+        <caption *ngIf="config.tableTitle">{{ config.tableTitle }}</caption>
+        <thead>
+            <tr>
+                <th *ngFor="let item of config.tableConfig">{{ item.header }}</th>
+                <th *ngIf="config.actions">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td *ngFor="let c of config.tableConfig">
+                    <span>{{ item[c.model] }}</span>
+                    <input type="" value="Freecode Camp">
+                </td>
+                <td *ngIf="config.actions">
+                    <button *ngFor="let ac of config.actions" class="btn" [ngClass]="ac.type"> {{ ac.name }}
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

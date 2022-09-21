@@ -1,0 +1,83 @@
+.table-container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+    box-shadow: 2px 3px 13px rgba(0, 0, 0, 0.05);
+}
+
+table.fe-table {
+    width: 100%;
+    background-color: #f3fdff;
+}
+
+table.fe-table caption,
+table.fe-table th,
+table.fe-table td {
+    padding: 24px;
+    text-align: center;
+}
+
+table.fe-table caption {
+    padding: 12px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+table.fe-table th {
+    font-weight: bold;
+}
+
+table.fe-table tbody tr:nth-child(even) {
+    background-color: #e9f3ff;
+}
+
+table.fe-table tbody tr:hover {
+    background-color: #cfd7e1;
+    cursor: pointer;
+}
+
+table.fe-table tbody tr td:has(input) {
+    padding: 8px;
+}
+
+table.fe-table tbody tr td input {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: #f0f1f1;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 11%);
+}
+
+.btn {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    min-width: 64px;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.90);
+    box-shadow: 3px 2px 12px 1px rgba(0, 0, 0, 0.14);
+}
+
+.primary {
+    background-color: #6d7bdf;
+    color: white;
+}
+
+.danger {
+    background-color: #d95151;
+    color: white;
+}
+
+.warning {
+    background-color: #d38f11;
+    color: white;
+}
