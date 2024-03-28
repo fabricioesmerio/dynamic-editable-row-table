@@ -3,16 +3,16 @@ export interface ConfigFeEditableRowTable {
     tableTitle?: string;
     primarykey: any;
     tableConfig: Array<TableConfig>
-    actions: Array<ActionsRowTable>
+    bntActions: Array<ButtonsAction>
 }
 
-interface ActionsRowTable {
-    name: string;
+export interface ButtonsAction {
+    label: string;
     event: string;
     type: 'primary' | 'danger' | 'warning'
 }
 
-interface TableConfig {
+export interface TableConfig {
     header: string;
     model: string;
     editable: boolean;

@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ConfigFeEditableRowTable } from './interfaces/fe-editable-row-table-config.interface';
-import { DataFeEditableRowTable } from './interfaces/fe-editable-row-table-data.interface';
 
 @Component({
     selector: 'fe-editable-row-table',
@@ -11,7 +10,7 @@ export class FeEditableRowTableComponent implements OnInit {
 
     @Input() data: any[] = [];
     @Input() config: ConfigFeEditableRowTable = {
-        actions: [],
+        bntActions: [],
         tableConfig: [],
         primarykey: null
     };
@@ -19,6 +18,10 @@ export class FeEditableRowTableComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void {
+        setTimeout(() => {
+            console.log(`DATA :: ${JSON.stringify(this.data)}`)
+            console.log(`CONFIG :: ${JSON.stringify(this.config)}`)
+        }, 2500);
     }
 
 }
